@@ -12,17 +12,37 @@
   --bg-gray: #f9fafb;
 }
 
+/* Base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
   background-color: var(--bg-light);
-  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scroll Animation Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 a {
