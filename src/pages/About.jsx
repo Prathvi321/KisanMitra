@@ -27,15 +27,15 @@ const About = () => {
         }}></div>
 
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', color: 'white' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(74,222,128,0.2)', color: '#4ade80', padding: '0.5rem 1.5rem', borderRadius: '2rem', fontWeight: '600', marginBottom: '2rem', border: '1px solid rgba(74,222,128,0.3)', letterSpacing: '2px', textTransform: 'uppercase' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(255, 255, 255, 0.15)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '2rem', fontWeight: '600', marginBottom: '2rem', border: '1px solid rgba(255, 255, 255, 0.3)', letterSpacing: '2px', textTransform: 'uppercase' }}>
             Kisaan Mitra's
           </div>
           <h1 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: '800', marginBottom: '1.5rem', lineHeight: '1.2' }}>
             Eco-conscious reaper
             <br />
-            <span style={{ color: 'var(--primary-green)' }}>revolutionizing farmers lives</span>
+            <span style={{ color: 'var(--accent-orange, #f97316)' }}>revolutionizing farmers lives</span>
           </h1>
-          <p style={{ fontSize: '1.25rem', color: '#d1d5db', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+          <p style={{ fontSize: '1.25rem', color: '#f3f4f6', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
             Powering Sustainable Agriculture. An electrical reaper that cuts cost, enhances efficiency and reduces carbon footprint.
           </p>
         </div>
@@ -70,7 +70,7 @@ const About = () => {
           {/* Right: Modern Visual Array */}
           <div style={{ position: 'relative' }}>
              <img 
-               src="https://images.unsplash.com/photo-1595821946022-294026bdca5a?q=80&w=2670&auto=format&fit=crop" 
+               src="/Happy Farmer.png" 
                alt="Sustainable Farming" 
                style={{ width: '100%', borderRadius: '2rem', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)', position: 'relative', zIndex: 2 }}
              />
