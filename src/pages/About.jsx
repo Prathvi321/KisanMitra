@@ -18,11 +18,11 @@ const About = () => {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}>
-        {/* Dark Overlay */}
+        {/* Green Overlay */}
         <div style={{
           position: 'absolute',
           top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(17, 24, 39, 0.7)',
+          backgroundColor: 'rgba(21, 80, 40, 0.85)', // Dark thematic green for excellent readability
           zIndex: 0
         }}></div>
 
@@ -74,12 +74,7 @@ const About = () => {
                alt="Sustainable Farming" 
                style={{ width: '100%', borderRadius: '2rem', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)', position: 'relative', zIndex: 2 }}
              />
-             <div style={{ position: 'absolute', bottom: '-2rem', left: '-2rem', background: 'var(--primary-green)', color: 'white', padding: '2rem', borderRadius: '1rem', zIndex: 3, boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
-                <div style={{ fontSize: '3rem', fontWeight: '800', lineHeight: '1' }}>100%</div>
-                <div style={{ fontSize: '1rem', fontWeight: '500', opacity: 0.9 }}>Green Technology</div>
-             </div>
-             {/* Decorative blob behind */}
-             <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '100%', height: '100%', background: 'rgba(40,179,75,0.1)', borderRadius: '3rem', zIndex: 1, transform: 'rotate(-3deg)' }}></div>
+             {/* Clean Image container without decorative elements */}
           </div>
           
         </div>
