@@ -43,7 +43,11 @@ const Navbar = () => {
         
         <ul style={{ display: 'flex', gap: '2rem', fontWeight: '500' }}>
           {['Home', 'Product', 'About Us', 'Contact'].map((item) => {
-            const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
+            let path = '/';
+            if (item === 'Product') path = '/product';
+            if (item === 'About Us') path = '/about';
+            if (item === 'Contact') path = '/contact';
+            
             return (
               <li key={item}>
                 <Link 
