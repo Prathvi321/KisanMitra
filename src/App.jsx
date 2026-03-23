@@ -12,10 +12,24 @@ import './index.css';
 // and attaching IntersectionObserver for scroll animations
 function ScrollHandling() {
   const { pathname } = useLocation();
+  const scrollPositions = React.useRef({});
 
+  // 1. Track scroll positions for the current page
   useEffect(() => {
-    // 1. Fix the scroll for other pages (always open from top)
-    window.scrollTo(0, 0);
+    const handleScroll = () => {
+      scrollPositions.current[pathname] = window.scrollY;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [pathname]);
+
+  // 2. Restore scroll position for the new page (defaulting to Top)
+  useEffect(() => {
+    const savedPosition = scrollPositions.current[pathname] || 0;
+    // Use timeout to allow React to paint the new DOM before jumping down
+    setTimeout(() => {
+      window.scrollTo(0, savedPosition);
+    }, 10);
   }, [pathname]);
 
   useEffect(() => {
